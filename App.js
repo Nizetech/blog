@@ -3,7 +3,10 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import IndexScreen from "./Src/index_screen";
 import { StatusBar } from "expo-status-bar";
-import { BlogProvider } from "./Src/context/blog_context";
+// import { BlogProvider } from "./Src/context/blog_context";
+import { Provider } from "./Src/context/blog_context";
+import ShowScreen from "./Src/screens/show_screen";
+import CreateScreen from "./Src/screens/create_screen";
 
 const Stack = createStackNavigator();
 
@@ -18,14 +21,19 @@ const App = () => {
         }}
       >
         <Stack.Screen name="IndexScreen" component={IndexScreen} />
+        <Stack.Screen name="ShowScreen" component={ShowScreen} />
+        <Stack.Screen name="CreateScreen" component={CreateScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
 export default () => {
   return (
-    <BlogProvider>
+    <Provider>
       <App />
-    </BlogProvider>
+    </Provider>
+    // <BlogProvider>
+    //   <App />
+    // </BlogProvider>
   );
 };
