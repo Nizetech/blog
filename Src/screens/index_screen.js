@@ -43,10 +43,12 @@ const IndexScreen = ({ navigation }) => {
           );
         }}
       ></FlatList>
-      <Button title="Add Blog Post" onPress={addBlogPost} />
+      {/* <Button title="Add Blog Post" onPress={addBlogPost} /> */}
     </View>
   );
 };
+
+
 
 const styles = StyleSheet.create({
   container: {

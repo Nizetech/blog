@@ -4,7 +4,7 @@ import { Context } from "../context/blog_context";
 
 const ShowScreen = ({ route }) => {
   const { id } = route.params;
-  console.log(id);
+  //   console.log(id);
   const { state } = useContext(Context);
 
   const blogPost = state.find((blogPost) => blogPost.id === id);
@@ -19,7 +19,7 @@ const ShowScreen = ({ route }) => {
 
   return (
     <View>
-      <Text>{blogPost.title}</Text>
+      <Text>{blogPost.content}</Text>
     </View>
   );
 };
